@@ -9,6 +9,5 @@ var recommendations_1 = __importDefault(require("./routes/api/recommendations"))
 var app = express();
 app.use(cors_1.default());
 app.use("/recommendations", recommendations_1.default);
-app.listen(5000, function () {
-    console.log("App is listening on port 5000!");
-});
+var PORT = process.env.PORT || 5000;
+app.listen(PORT, function () { return console.log("Server started on " + PORT); });

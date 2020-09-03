@@ -9,11 +9,11 @@ router.get("/", function (req, res) {
     db.reject = [];
 });
 router.put("/:id/accept", function (req, res) {
+    res.status(204).json(req.params.id);
     db.accept.push(req.params.id);
-    res.status(204);
 });
 router.put("/:id/reject", function (req, res) {
-    db.reject.push(req.params.id);
     res.status(204);
+    db.reject.push(req.params.id);
 });
 exports.default = router;

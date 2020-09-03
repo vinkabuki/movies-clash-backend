@@ -8,11 +8,11 @@ router.get("/", (req: express.Request, res: express.Response) => {
 	db.reject = [];
 });
 router.put("/:id/accept", (req: express.Request, res: express.Response) => {
-	res.status(204).json(req.params.id);
 	db.accept.push(req.params.id);
+	res.status(204).send();
 });
 router.put("/:id/reject", (req: express.Request, res: express.Response) => {
-	res.status(204);
 	db.reject.push(req.params.id);
+	res.status(204).send();
 });
 export default router;

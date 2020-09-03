@@ -2,19 +2,19 @@ import express = require("express");
 import cors from "cors";
 
 import recommendations from "./routes/api/recommendations";
-import accept from "./routes/api/accept";
-import reject from "./routes/api/reject";
+import accepted from "./routes/api/accepted";
+import rejected from "./routes/api/rejected";
 
 const corsOptions = {
-	origin: "https://vinkabuki.github.io/movies-clash/",
+	origin: "https://vinkabuki.github.io/",
 };
 
 const app: express.Application = express();
 
 app.use(cors(corsOptions));
 app.use("/recommendations", recommendations);
-app.use("/accept", accept);
-app.use("/reject", reject);
+app.use("/accepted", accepted);
+app.use("/rejected", rejected);
 
 const PORT = process.env.PORT || 5000;
 

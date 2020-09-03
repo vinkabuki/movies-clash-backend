@@ -9,8 +9,10 @@ router.get("/", (req: express.Request, res: express.Response) => {
 });
 router.put("/:id/accept", (req: express.Request, res: express.Response) => {
 	db.accept.push(req.params.id);
+	res.status(200);
 });
 router.put("/:id/reject", (req: express.Request, res: express.Response) => {
 	db.reject.push(req.params.id);
+	res.status(200);
 });
 export default router;

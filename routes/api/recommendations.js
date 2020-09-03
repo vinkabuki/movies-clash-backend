@@ -10,8 +10,10 @@ router.get("/", function (req, res) {
 });
 router.put("/:id/accept", function (req, res) {
     db.accept.push(req.params.id);
+    res.status(200);
 });
 router.put("/:id/reject", function (req, res) {
     db.reject.push(req.params.id);
+    res.status(200);
 });
 exports.default = router;

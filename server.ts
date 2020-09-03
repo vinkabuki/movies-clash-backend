@@ -6,7 +6,7 @@ import accepted from "./routes/api/accepted";
 import rejected from "./routes/api/rejected";
 
 const corsOptions = {
-	origin: "https://vinkabuki.github.io/",
+	origin: "https://vinkabuki.github.io/movies-clash/:1",
 };
 
 const app: express.Application = express();

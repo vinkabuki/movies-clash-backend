@@ -9,7 +9,7 @@ var recommendations_1 = __importDefault(require("./routes/api/recommendations"))
 var accepted_1 = __importDefault(require("./routes/api/accepted"));
 var rejected_1 = __importDefault(require("./routes/api/rejected"));
 var corsOptions = {
-    origin: "https://vinkabuki.github.io/",
+    origin: "https://vinkabuki.github.io/movies-clash/:1",
 };
 var app = express();
 app.use(cors_1.default(corsOptions));
